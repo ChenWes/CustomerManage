@@ -37,93 +37,93 @@
     // NESTED EXAMPLE
     // ---------------------
 
-    var gridTree = $('#jqGridTree');
+    //var gridTree = $('#jqGridTree');
 
-    gridTree.jqGrid({
-      url: "/Content/Json/jqgrid-tree.json",
-      colModel: [
-        {
-          name: "category_id",
-          index: "accounts.account_id",
-          sorttype: "int",
-          key: true,
-          hidden: true,
-          width:  60
-        },{
-          name: "name",
-          index: "name",
-          sorttype: "string",
-          label: "Name",
-          width: 160
-        },{
-          name: "price",
-          index: "price",
-          sorttype: "numeric",
-          label: "Price",
-          width: 90,
-          align: "right"
-        },{
-          name: "qty_onhand",
-          index: "qty_onhand",
-          sorttype: "int",
-          label: "Qty",
-          width: 90,
-          align: "right"
-        },{
-          name: "color",
-          index: "color",
-          sorttype: "string",
-          label: "Color",
-          width: 70
-        },{
-          name: "lft",
-          hidden: true
-        },{
-          name: "rgt",
-          hidden: true
-        },{
-          name: "level",
-          hidden: true
-        },{
-          name: "uiicon",
-          hidden: true
-        }
-      ],
-      // width: "780",
-      hoverrows: false,
-      // viewrecords: false,
-      // gridview: true,
-      height: "auto",
-      sortname: "lft",
-      loadonce: true,
-      rowNum: 30,
-      // scrollrows: true,
-      // enable tree grid
-      treeGrid: true,
-      // which column is expandable
-      ExpandColumn: "name",
-      // datatype
-      treedatatype: "json",
-      // the model used
-      treeGridModel: "nested",
-      // configuration of the data comming from server
-      treeReader: {
-        left_field: "lft",
-        right_field: "rgt",
-        level_field: "level",
-        leaf_field: "isLeaf",
-        expanded_field: "expanded",
-        loaded: "loaded",
-        icon_field: "icon"
-      },
-      sortorder: "asc",
-      datatype: "json",
-      pager: "#jqGridTreePager",
-      viewrecords: true, // show the current page, data rang and total records on the toolbar
-      autowidth: true,
-      shrinkToFit: true,
-      caption: "Nested Example"
-    });
+    //gridTree.jqGrid({
+    //  url: "/Content/Json/jqgrid-tree.json",
+    //  colModel: [
+    //    {
+    //      name: "category_id",
+    //      index: "accounts.account_id",
+    //      sorttype: "int",
+    //      key: true,
+    //      hidden: true,
+    //      width:  60
+    //    },{
+    //      name: "name",
+    //      index: "name",
+    //      sorttype: "string",
+    //      label: "Name",
+    //      width: 160
+    //    },{
+    //      name: "price",
+    //      index: "price",
+    //      sorttype: "numeric",
+    //      label: "Price",
+    //      width: 90,
+    //      align: "right"
+    //    },{
+    //      name: "qty_onhand",
+    //      index: "qty_onhand",
+    //      sorttype: "int",
+    //      label: "Qty",
+    //      width: 90,
+    //      align: "right"
+    //    },{
+    //      name: "color",
+    //      index: "color",
+    //      sorttype: "string",
+    //      label: "Color",
+    //      width: 70
+    //    },{
+    //      name: "lft",
+    //      hidden: true
+    //    },{
+    //      name: "rgt",
+    //      hidden: true
+    //    },{
+    //      name: "level",
+    //      hidden: true
+    //    },{
+    //      name: "uiicon",
+    //      hidden: true
+    //    }
+    //  ],
+    //  // width: "780",
+    //  hoverrows: false,
+    //  // viewrecords: false,
+    //  // gridview: true,
+    //  height: "auto",
+    //  sortname: "lft",
+    //  loadonce: true,
+    //  rowNum: 30,
+    //  // scrollrows: true,
+    //  // enable tree grid
+    //  treeGrid: true,
+    //  // which column is expandable
+    //  ExpandColumn: "name",
+    //  // datatype
+    //  treedatatype: "json",
+    //  // the model used
+    //  treeGridModel: "nested",
+    //  // configuration of the data comming from server
+    //  treeReader: {
+    //    left_field: "lft",
+    //    right_field: "rgt",
+    //    level_field: "level",
+    //    leaf_field: "isLeaf",
+    //    expanded_field: "expanded",
+    //    loaded: "loaded",
+    //    icon_field: "icon"
+    //  },
+    //  sortorder: "asc",
+    //  datatype: "json",
+    //  pager: "#jqGridTreePager",
+    //  viewrecords: true, // show the current page, data rang and total records on the toolbar
+    //  autowidth: true,
+    //  shrinkToFit: true,
+    //  caption: "Nested Example"
+    //});
 
     $(window).on('resize', function() {
         var width = $('.jqgrid-responsive').width();

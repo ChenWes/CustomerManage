@@ -8,7 +8,7 @@ namespace CustomerManage
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-// App Styles
+            // App Styles
             bundles.Add(new StyleBundle("~/Content/appCss").Include(
                 "~/Content/app/css/app.css"
             ));
@@ -54,7 +54,6 @@ namespace CustomerManage
             ));
 
             // Demos
-
             bundles.Add(new ScriptBundle("~/bundles/demoDatatable").Include(
                 "~/Scripts/demo/demo-datatable.js"
             ));
@@ -112,7 +111,6 @@ namespace CustomerManage
             ));
 
             // Main Vendor
-
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-2.1.3.js"
             ));
@@ -126,7 +124,6 @@ namespace CustomerManage
             ));
 
             // Vendor Plugins
-
             bundles.Add(new ScriptBundle("~/bundles/sparklines").Include(
                 "~/Vendor/sparklines/jquery.sparkline.min.js"
             ));
@@ -308,6 +305,10 @@ namespace CustomerManage
               "~/Vendor/html.sortable/dist/html.sortable.js"
             ));
 
+
+
+           
+
             bundles.Add(new ScriptBundle("~/bundles/jqGrid").Include(
               "~/Vendor/jqgrid/js/jquery.jqGrid.js",
               "~/Vendor/jqgrid/js/i18n/grid.locale-en.js"
@@ -402,7 +403,26 @@ namespace CustomerManage
             bundles.Add(new StyleBundle("~/bundles/JQCloudCss").Include(
                 "~/Vendor/jqcloud2/dist/jqcloud.css"
             ));
-        
+
+            //*******************************************************************************
+            //DataTable CSS
+            bundles.Add(new StyleBundle("~/bundles/datatablecss").Include(
+                "~/Scripts/table/css/bootstrap.min.css",
+                "~/Scripts/table/css/bootstrap-table.css"
+            ));
+
+            //DataTable Script
+            bundles.Add(new ScriptBundle("~/bundles/datatable").Include(
+             "~/Scripts/table/bootstrap-table.js",
+             "~/Scripts/table/bootstrap-table-zh-CN.js"
+           ));
+
+
+            //UserList
+            bundles.Add(new ScriptBundle("~/bundles/userlist").Include(
+             "~/Scripts/table/app.js"
+           ));
+
         }
     }
 }

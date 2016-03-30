@@ -1,4 +1,5 @@
 $(function () {
+    alert("WesChen");
 
     //1.初始化Table
     var oTable = new TableInit();
@@ -7,6 +8,7 @@ $(function () {
     //2.初始化Button的点击事件
     var oButtonInit = new ButtonInit();
     oButtonInit.Init();
+
 
 });
 

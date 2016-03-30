@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "UserAccount";
+}
+
+<h3>
+    User Account
+    <small>Manage System Login User Account</small>
+</h3>
+<!-- START panel-->
+<!-- START panel-->
+<div class="panel panel-default">
+    <div class="panel-heading">Search</div>
+    <div class="panel-body">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label class="col-lg-2 control-label">UserCode</label>
+                <div class="col-lg-4">
+                    <input type="text" placeholder="UserCode" class="form-control" />
+                </div>
+                <label class="col-lg-2 control-label">UserName</label>
+                <div class="col-lg-4">
+                    <input type="text" placeholder="UserName" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-2 control-label">DisplayName</label>
+                <div class="col-lg-4">
+                    <input type="text" placeholder="DisplayName" class="form-control" />
+                </div>
+                <label class="col-lg-2 control-label">Active</label>
+                <div class="col-lg-4">
+                    <div class="checkbox c-checkbox">
+                        <label>
+                            <input type="checkbox" checked="" />
+                            <span class="fa fa-times"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button type="button" class="mb-sm btn btn-default">Search</button>                    
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- END panel-->
+<!-- JSON-->
+<div class="jqgrid-responsive mb-lg">
+    <table id="tb_departments"></table>    
+</div>
+
+@section Styles  {
+    @Styles.Render("~/bundles/datatablecss") 
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/datatable")
+    @Scripts.Render("~/bundles/userlist")    
+}

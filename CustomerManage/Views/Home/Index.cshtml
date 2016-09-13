@@ -19,7 +19,7 @@
         </div>
     </div>
     <!-- END Language list    -->
-    福千玺家居
+    水天一线家居
     <small data-localize="dashboard.WELCOME"></small>
 </div>
 <!-- START widgets box-->
@@ -486,4 +486,14 @@
     @Scripts.Render("~/bundles/moment")
     @Scripts.Render("~/bundles/skycons")
     @Scripts.Render("~/bundles/demoFlot")
+
+
+    <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="~/signalr/hubs"></script>
+    <script>
+        var chat = $.connection.systemMessageHub;
+        chat.client.addNewMessage = function (messageSender, messageDateTime, messageType, messageContent) {
+            alert(messageContent);
+        }
+    </script>
 }

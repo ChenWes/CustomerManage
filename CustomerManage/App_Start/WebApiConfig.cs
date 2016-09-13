@@ -17,7 +17,7 @@ namespace CustomerManage
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "api/{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Idex", id = RouteParameter.Optional }
+                defaults: new { id = RouteParameter.Optional }
             );
         }
     }

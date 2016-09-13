@@ -5,13 +5,12 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace CustomerManage.Controllers
+namespace CustomerManage.Controllers.API
 {
-    public class UserAccount : ApiController
+    public class UserAccountController : ApiController
     {
         // GET api/<controller>
         //[Route("api/v1/useraccount")]
-        [HttpGet]
         public IEnumerable<Models.DB.UserAccount> Get()
         {
             Models.DB.UserAccount[] returnValue = null;

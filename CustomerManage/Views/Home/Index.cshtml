@@ -491,9 +491,19 @@
     <script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
     <script src="~/signalr/hubs"></script>
     <script>
-        var chat = $.connection.systemMessageHub;
-        chat.client.addNewMessage = function (messageSender, messageDateTime, messageType, messageContent) {
-            alert(messageContent);
-        }
+        $(function () {
+            //step 1 , connection
+            var chat = $.connection.systemMessageHub;
+
+            //step 2 , define client function
+            chat.client.addNewMessage = function (messageSender, messageDateTime, messageType, messageContent) {
+                alert(messageContent);
+            }            
+
+            //step 3 , get start
+            $.connection.hub.start().done(function () {
+
+            });
+        });
     </script>
 }

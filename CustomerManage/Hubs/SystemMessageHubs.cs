@@ -21,12 +21,12 @@ namespace CustomerManage.Hubs
         {
             if (signalRHub == null)
             {
-                signalRHub = GlobalHost.ConnectionManager.GetHubContext<ChatHub>();
+                signalRHub = GlobalHost.ConnectionManager.GetHubContext<SystemMessageHub>();
             }
             if (signalRHub != null)
             {
                 signalRHub.Clients.All.addNewMessage(pi_messageSender, pi_messageDateTime, pi_messageType, pi_messageContent);
             }
-        }
+        }        
     }
 }

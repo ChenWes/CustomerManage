@@ -20,7 +20,7 @@ namespace CustomerManage.Controllers
             ViewBag.Message = "Your application description page.";
 
             CustomerManage.Hubs.ChatHub.Send("System", DateTime.Now.ToString() + " Run GetByID");
-            CustomerManage.Hubs.NewHub.Send("System", DateTime.Now.ToShortDateString(), "Info", "System On Line");
+            CustomerManage.Hubs.SystemMessageHub.Send("System", DateTime.Now.ToShortDateString(), "Info", "System On Line");
 
             return View();
         }

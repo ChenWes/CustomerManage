@@ -12,6 +12,15 @@ namespace CustomerManage.Controllers
     {
         public ActionResult Index()
         {
+            Common.IUserNotifySubject l_newUserNotifySubject = new Common.UserNotifyBase();
+            Common.UserNotifyOrder l_dd = new Common.UserNotifyOrder(l_newUserNotifySubject);
+
+            l_newUserNotifySubject.SettingNotify("GOOrder", 20);
+            l_newUserNotifySubject.SettingNotify("POrder", 60);
+            l_newUserNotifySubject.SettingNotify("WebOrder", 50);
+
+            string getmess = l_dd.mc_GetNotifyMessagel;
+
             return View();
         }
 

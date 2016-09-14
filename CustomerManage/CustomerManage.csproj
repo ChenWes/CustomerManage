@@ -212,6 +212,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Common\UserNotify\IUserNotifyDisplay.cs" />
+    <Compile Include="Common\UserNotify\IUserNotifySubject.cs" />
+    <Compile Include="Common\UserNotify\IUserNotityObserver.cs" />
+    <Compile Include="Common\UserNotify\UserNotifyBase.cs" />
+    <Compile Include="Common\UserNotify\UserNotifyOrder.cs" />
+    <Compile Include="Common\UserNotify\UserOrderNotifyClass.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\API\UserAccount.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -625,7 +631,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Common\" />
     <Folder Include="Vendor\blueimp-file-upload\js\cors\" />
     <Folder Include="Vendor\blueimp-file-upload\js\vendor\" />
   </ItemGroup>

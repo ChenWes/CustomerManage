@@ -212,6 +212,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Common\UserAccess\Beverage.cs" />
+    <Compile Include="Common\UserAccess\CondimentDecorator.cs" />
+    <Compile Include="Common\UserAccess\DarkRoast.cs" />
+    <Compile Include="Common\UserAccess\Espresso.cs" />
+    <Compile Include="Common\UserAccess\HouseBlend.cs" />
+    <Compile Include="Common\UserAccess\Mocha.cs" />
     <Compile Include="Common\UserNotify\IUserNotifyDisplay.cs" />
     <Compile Include="Common\UserNotify\IUserNotifySubject.cs" />
     <Compile Include="Common\UserNotify\IUserNotityObserver.cs" />

@@ -39,11 +39,17 @@ namespace CustomerManage.Common
 
         public void notifyObservers()
         {
-            for (int i = 0; i < observers.Count; i++)
+            //for (int i = 0; i < observers.Count; i++)
+            //{
+            //    IUserNotifyObserver observer = (IUserNotifyObserver)observers[i];
+            //    observer.Update(notifyType, notifyCount);
+            //}
+
+            foreach (IUserNotifyObserver Observer in observers)
             {
-                IUserNotifyObserver observer = (IUserNotifyObserver)observers[i];
-                observer.Update(notifyType, notifyCount);
+                Observer.Update(notifyType,notifyCount);
             }
+
         }
 
         public void SettingNotify(string pi_NotifyType, int pi_NotifyCount)

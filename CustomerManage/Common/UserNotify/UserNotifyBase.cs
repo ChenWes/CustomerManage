@@ -25,15 +25,21 @@ namespace CustomerManage.Common
 
         public void registerObserver(IUserNotifyObserver o)
         {
-            observers.Add(o);
+            //注册，如不存在则加入
+            int i = observers.IndexOf(o);
+            if (i < 0)
+            {
+                observers.Add(o);
+            }
         }
 
         public void removeObserver(IUserNotifyObserver o)
         {
+            //移除，如存在则移除
             int i = observers.IndexOf(o);
             if (i >= 0)
             {
-                observers.Remove(i);
+                observers.Remove(o);
             }
         }
 
@@ -45,6 +51,7 @@ namespace CustomerManage.Common
             //    observer.Update(notifyType, notifyCount);
             //}
 
+            //注册的观察者逐个调用通知方法
             foreach (IUserNotifyObserver Observer in observers)
             {
                 Observer.Update(notifyType,notifyCount);

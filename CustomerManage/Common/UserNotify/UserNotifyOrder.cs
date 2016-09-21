@@ -14,6 +14,7 @@ namespace CustomerManage.Common
         public string mc_GetNotifyMessagel;
 
         public UserNotifyOrder(IUserNotifySubject userData)
+            : base()
         {
             this.userData = userData;
             userData.registerObserver(this);

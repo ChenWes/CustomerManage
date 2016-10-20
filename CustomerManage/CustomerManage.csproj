@@ -399,7 +399,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
-    <Content Include="Scripts\fabricpart\fabricpart.js" />
     <Content Include="Scripts\garmentstyle\garmentstyle.js" />
     <Content Include="Scripts\jqPaginator.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -410,7 +409,6 @@
     <Content Include="Scripts\knockout-3.3.0.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\npm.js" />
-    <Content Include="Scripts\part\part.js" />
     <Content Include="Scripts\table\app.js" />
     <Content Include="Scripts\table\bootstrap-table-zh-CN.js" />
     <Content Include="Scripts\table\bootstrap-table.js" />
@@ -418,7 +416,6 @@
     <Content Include="Scripts\table\css\bootstrap-table.css" />
     <Content Include="Scripts\table\css\bootstrap.min.css" />
     <Content Include="Scripts\table\jquery.min.js" />
-    <Content Include="Scripts\trimpart\trimpart.js" />
     <Content Include="Vendor\animate.css\animate.min.css" />
     <Content Include="Vendor\animo.js\animo.js" />
     <Content Include="Vendor\blueimp-canvas-to-blob\js\canvas-to-blob.js" />
@@ -634,6 +631,7 @@
     <Content Include="Views\GarmentStyle\List.cshtml" />
     <Content Include="Views\BaseSetting\UserAccount.cshtml" />
     <Content Include="Views\BaseSetting\UserRole.cshtml" />
+    <Content Include="Views\GarmentStyle\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -672,7 +670,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59151</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:59151/</IISUrl>
+          <IISUrl>http://localhost:16888/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

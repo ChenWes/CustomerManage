@@ -10,15 +10,23 @@ namespace CustomerManage.Controllers.API
     public class UserAccountController : ApiController
     {
         // GET api/<controller>
-        //[Route("api/v1/useraccount")]
+        [Route("api/v1/useraccount")]
         public IEnumerable<Models.DB.UserAccount> Get()
         {
-            Models.DB.UserAccount[] returnValue = null;
+            List<Models.DB.UserAccount> returnValue = null;
 
-            using (Models.DB.FoKaContext fokaContext = new Models.DB.FoKaContext())
+            returnValue.Add(new Models.DB.UserAccount()
             {
-                returnValue = fokaContext.UserAccount.ToArray();
-            }
+                UserID = 12,
+                UserCode = "weschen",
+                UserName = "WesChen",
+                Active = "Y"
+            });
+
+            //using (Models.DB.FoKaContext fokaContext = new Models.DB.FoKaContext())
+            //{
+            //    returnValue = fokaContext.UserAccount.ToArray();
+            //}
 
             return returnValue;
         }

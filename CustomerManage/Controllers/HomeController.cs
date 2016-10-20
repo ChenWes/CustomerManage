@@ -35,6 +35,8 @@ namespace CustomerManage.Controllers
             //以上为装饰者模式 
             //--------------------------------------------------------------------------
 
+            ViewBag.Title = "Home";
+
             return View();
         }
 

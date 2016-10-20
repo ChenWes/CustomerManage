@@ -18,6 +18,12 @@ namespace CustomerManage.Controllers
         //
         // GET: /GarmentType/
         
+        public ActionResult Index()
+        {
+            ViewBag.Title = "Table Demo";
+            return View();
+        }
+
         public ActionResult GetById()
         {
             CustomerManage.Hubs.ChatHub.Send("System", DateTime.Now.ToString() + " Run GetByID");
